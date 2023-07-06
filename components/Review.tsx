@@ -25,7 +25,7 @@ const Review = () => {
           and engaging in thoughtful discussions.”
         </p>
 
-        <div className="flex gap-2 flex-row items-center ">
+        <div className="flex gap-2 md:flex-row flex-col items-center ">
           <h2 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-xl">
             <b>Adebobola Muhydeen,</b>
           </h2>
@@ -37,9 +37,11 @@ const Review = () => {
           </p>
         </div>
 
-        <button className="cursor-pointer h-10 w-28 bg-blue-700 rounded-md capitalize text-white self-start">
-          Join Chatter
-        </button>
+        <div className="flex justify-center items-center w-full md:block">
+          <button className="cursor-pointer h-10 w-28 bg-blue-700 rounded-md capitalize text-white self-start">
+            Join Chatter
+          </button>
+        </div>
       </aside>
     </>
   );
