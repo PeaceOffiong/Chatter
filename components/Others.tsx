@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Others = () => {
   return (
@@ -50,9 +51,11 @@ const Others = () => {
           Share people your great ideas, and also read write-ups based on your
           interests. connect with people of same interests and goals
         </p>
-        <button className="cursor-pointer h-10 w-28 bg-blue-700 rounded-md capitalize text-white self-start">
-          Get Started
-        </button>
+        <Link href="/LoginSignup">
+          <button className="cursor-pointer h-10 w-28 bg-blue-700 rounded-md capitalize text-white self-start">
+            Get Started
+          </button>
+        </Link>
       </aside>
     </>
   );

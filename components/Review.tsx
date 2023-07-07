@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Review = () => {
   return (
@@ -8,8 +9,8 @@ const Review = () => {
           <Image
             src="https://res.cloudinary.com/du8oaagwi/image/upload/v1688508324/Person1_qnkadx.svg"
             alt="person"
-            height="350"
-            width="350"
+            height="450"
+            width="450"
             className="rounded-full"
           />
         </div>
@@ -38,9 +39,11 @@ const Review = () => {
         </div>
 
         <div className="flex justify-center items-center w-full md:block">
-          <button className="cursor-pointer h-10 w-28 bg-blue-700 rounded-md capitalize text-white self-start">
-            Join Chatter
-          </button>
+          <Link href="/LoginSignup">
+            <button className="cursor-pointer h-10 w-28 bg-blue-700 rounded-md capitalize text-white self-start">
+              Join Chatter
+            </button>
+          </Link>
         </div>
       </aside>
     </>
