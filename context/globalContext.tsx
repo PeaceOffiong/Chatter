@@ -25,7 +25,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
   //UseRef to access Navbar elements to display based on path location
   const elementRef = useRef();
 
-  const navbarToogle = () => dispatch({ type: REDUCER_ACTION_TYPE.TOOGLE });
+  const navbarToogle:any = () => dispatch({ type: REDUCER_ACTION_TYPE.TOOGLE });
 
   const toogleDefault = () =>
     dispatch({ type: REDUCER_ACTION_TYPE.TOOGLEDEFAULT });

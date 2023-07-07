@@ -17,11 +17,11 @@ export const Navbar = () => {
 
   const navSection = elementRef.current;
 
-  const handleToogleDisappearance = () => {
-    if (asPath === "/LoginSignup") {
-      navSection.classList.add = "md:hidden";
-    }
-  };
+  // const handleToogleDisappearance = () => {
+  //   if (asPath === "/LoginSignup") {
+  //     navSection.classList.add = "md:hidden";
+  //   }
+  // };
 
   return (
     <>
