@@ -1,10 +1,17 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import { Navbar, InputForm } from "../components";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
+import { FaLinkedin } from "react-icons/fa";
 
 const LoginSignup = () => {
   return (
-    <section>
+    <section
+      style={{ fontFamily: "DM Sans, sans-serif" }}
+      className="md:h-screen 
+      // md:overflow-hidden
+      "
+    >
       <div className="fixed top-0 left-0 right-0 z-10 sm:hidden">
         <Navbar />
       </div>
@@ -29,16 +36,10 @@ const LoginSignup = () => {
           className="relative w-full sm:w-2/5 h-screen sm:h-fit bg-cover bg-no-repeat bg-center "
         >
           <div className="absolute inset-0 h-full bg-black bg-opacity-30 text-white flex items-center justify-center flex-col">
-            <h1
-              className={`tracking-wider text-3xl leading-loose`}
-              style={{ fontFamily: "DM Sans, sans-serif" }}
-            >
+            <h1 className={`tracking-wider text-3xl leading-loose`}>
               <b className="uppercase">chatter</b>
             </h1>
-            <p
-              style={{ fontFamily: "DM Sans, sans-serif" }}
-              className="w-4/5 leading-relaxed "
-            >
+            <p className="w-4/5 leading-relaxed ">
               Unleash the Power of Words, Connect with Like-minded Readers and
               Writers
             </p>
@@ -59,7 +60,7 @@ const LoginSignup = () => {
         >
           <div className="w-full flex items-center flex-col">
             {/*Switch Forms Navigation Section*/}
-            <div className="h-12 flex flex-col justify-evenly sm:w-4/6 w-4/5">
+            <div className="h-12 flex flex-col justify-evenly sm:w-3/4 w-4/5">
               <div className="flex flex-row text-sm cursor-pointer">
                 <p className="uppercase w-1/2">
                   <b>Register</b>
@@ -76,23 +77,121 @@ const LoginSignup = () => {
             </div>
 
             {/*Form Section*/}
-            <div className="relative sm:w-4/6 w-4/5 ">
-              <form className="absolute left-0  ">
-                <h2
-                  style={{ fontFamily: "DM Sans, sans-serif" }}
-                  className="text-xl"
-                >
-                  Register as a Writer
+            <div className="relative sm:w-3/4 w-4/5 ">
+              {/*Login */}
+              <form className="absolute left-0 w-full flex flex-col gap-3">
+                <h2 className="text-3xl text-center py-4">
+                  <b>Register as a Writer</b>
                 </h2>
+
+                <div className="flex flex-col md:flex-row md:justify-between gap-2">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="FirstName">First Name</label>
+                    <input
+                      type="text"
+                      name="FirstName"
+                      placeholder="Jane"
+                      className="border-grey-500 p-4 border-2 rounded-md h-12 w-full md:w-72"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="LastName">Last Name</label>
+                    <input
+                      type="text"
+                      name="LastName"
+                      placeholder="Doe"
+                      className="border-grey-500 p-4 border-2 rounded-md h-12 w-full md:w-72"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="joiningType">
+                      You are joining us as a?
+                    </label>
+                    <select
+                      name="joiningType"
+                      className="border-grey-500 border-2 rounded-md px-4 h-12 w-full "
+                    >
+                      <option value="Writer" className="p-4">
+                        Writer
+                      </option>
+                      <option value="Reader" className="p-4">
+                        Reader
+                      </option>
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="Email">Email address</label>
+                    <input
+                      type="email"
+                      name="Email"
+                      placeholder="Janedoe@gmail.com"
+                      className="border-grey-500 border-2 p-4 rounded-md h-12 w-full "
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="Password">Password</label>
+                    <input
+                      type="password"
+                      name="Password"
+                      placeholder=".........."
+                      className="border-grey-500 border-2 p-4 rounded-md h-12 w-full "
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="ConfirmPassword">Confirm Password</label>
+                    <input
+                      type="Confirmpassword"
+                      name="Password"
+                      placeholder=".........."
+                      className="border-grey-500 border-2 p-4 rounded-md h-12 w-full "
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <input
+                      type="submit"
+                      value="Create Account"
+                      className="cursor-pointer h-12 w-full bg-blue-700 rounded-md capitalize text-white self-start"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="border-grey-500 gap-3 flex items-center justify-center border-2 p-4 rounded-md h-12 w-full ">
+                      <FcGoogle className="text-2xl" />
+                      <p>Sign up with Google</p>
+                    </div>
+                    <div className="border-grey-500 gap-3 flex items-center justify-center border-2 p-4 rounded-md h-12 w-full ">
+                      <FaLinkedin className="text-2xl" />
+                      <p>Sign up with Linked In</p>
+                    </div>
+                  </div>
+                </div>
               </form>
 
-              <form className="absolute left-full invisible">
-                <h2
-                  style={{ fontFamily: "DM Sans, sans-serif" }}
-                  className="text-xl"
-                >
-                  Welcome back
+              {/* Login Page*/}
+              <form className="absolute left-full w-full ">
+                <h2 className="text-3xl text-center py-10">
+                  <b>Welcome back</b>
                 </h2>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="Email">Email address</label>
+                  <input
+                    type="email"
+                    name="Email"
+                    placeholder="Janedoe@gmail.com"
+                    className="border-grey-500 border-2 p-4 rounded-md h-12 w-full "
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="Email">Email address</label>
+                  <input
+                    type="email"
+                    name="Email"
+                    placeholder="Janedoe@gmail.com"
+                    className="border-grey-500 border-2 p-4 rounded-md h-12 w-full "
+                  />
+                </div>
               </form>
             </div>
           </div>

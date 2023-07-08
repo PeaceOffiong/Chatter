@@ -10,6 +10,10 @@ const reducer = (
       return { ...state, toogle: !state.toogle };
     case REDUCER_ACTION_TYPE.TOOGLEDEFAULT:
       return { ...state, toogle: false };
+    case REDUCER_ACTION_TYPE.FIXNAVBAR:
+      return { ...state, isNavbarFixed: true };
+    case REDUCER_ACTION_TYPE.NAVBARDEF:
+      return { ...state, isNavbarFixed: false };
     default:
       throw new Error();
   }

@@ -2,26 +2,15 @@ import { BsJustify } from "react-icons/bs";
 import Head from "next/head";
 import Link from "next/link";
 import { useGlobalContext } from "../context/globalContext";
-import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const {
     navbarToogle,
     toogle,
     toogleDefault,
-    elementRef
+    elementRef,
+    isNavbarFixed
   } = useGlobalContext();
-
-  const router = useRouter();
-  const { asPath } = router;
-
-  const navSection = elementRef.current;
-
-  const handleToogleDisappearance = () => {
-    if (asPath === "/LoginSignup") {
-      navSection.classList.add = "md:hidden";
-    }
-  };
 
   return (
     <>
@@ -37,7 +26,11 @@ export const Navbar = () => {
           rel="stylesheet"
         />
       </Head>
-      <nav className="fixed top-0 right-0 flex items-center justify-center h-20 w-full px-10 bg-white z-10">
+      <nav
+        className={`${
+          isNavbarFixed ? "fixed top-0 left-0" : ""
+        }flex items-center justify-center h-20 w-full px-10 bg-white z-10`}
+      >
         <section className=" w-full flex justify-between items-center h-full ">
           <aside className="w-1/3 ">
             <h2
@@ -67,10 +60,10 @@ export const Navbar = () => {
                       <b>Home</b>
                     </li>
                   </Link>
-                  <Link href ="#about">
-                  <li className="cursor-pointer" onClick={toogleDefault}>
-                    <b>About Us</b>
-                  </li>
+                  <Link href="#about">
+                    <li className="cursor-pointer" onClick={toogleDefault}>
+                      <b>About Us</b>
+                    </li>
                   </Link>
                   <li className="cursor-pointer" onClick={toogleDefault}>
                     <b>Contact</b>

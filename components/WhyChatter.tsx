@@ -23,9 +23,9 @@ const WhyChatter = () => {
           promoting dialogue and understanding, we strive
         </p>
       </div>
-      <div className="w-full">
-        <ul className="w-full flex items-center justify-center flex-col md:flex-row px-20 py-10 gap-8">
-          <li className="w-80 flex flex-col border-2 rounded-lg p-5 h-80">
+      <div className="w-full flex">
+        <ul className="w-full flex items-center justify-center flex-col md:flex-row px-20 py-10 gap-8 h-auto">
+          <li className="w-80 flex flex-col border-2 rounded-lg p-5 h-full flex-auto">
             <div className="py-1">
               <Image
                 alt="Icons"
@@ -49,7 +49,7 @@ const WhyChatter = () => {
               </p>
             </div>
           </li>
-          <li className="w-80 flex flex-col  border-2 rounded-lg p-5 h-80">
+          <li className="w-80 flex flex-col  border-2 rounded-lg p-5 h-full flex-auto">
             <div className="py-1">
               <Image
                 alt="Icons"
@@ -72,7 +72,7 @@ const WhyChatter = () => {
               </p>
             </div>
           </li>
-          <li className="w-80 flex flex-col border-2 rounded-lg p-5 h-80">
+          <li className="w-80 flex flex-auto flex-col border-2 rounded-lg p-5 h-full ">
             <div className="py-1">
               <Image
                 alt="Icons"
