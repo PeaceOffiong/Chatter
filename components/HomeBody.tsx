@@ -25,7 +25,7 @@ const HomeBody = () => {
             className="w-3/5 leading-relaxed text-xl md:text-2xl"
           >
             Unleash the Power of Words, Connect with Like-minded Readers and
-            Writers.
+            Writers. Lets see
           </p>
           <div className="flex w-3/5">
             <Link href="/LoginSignup">
