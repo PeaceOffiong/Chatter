@@ -1,4 +1,5 @@
 import {
+  Navbar,
   HomeBody,
   About,
   WhyChatter,
@@ -7,10 +8,21 @@ import {
   Footer
 } from "../components";
 
+import { useGlobalContext } from "../context/globalContext";
+import { useEffect } from "react";
+
 export default function IndexPage() {
+  const { fixNavBar,isNavbarFixed } = useGlobalContext();
+
+  useEffect(() => {
+    fixNavBar();
+    console.log("wetin dey sup");
+  },[isNavbarFixed]);
+
   return (
     <main>
-      <section id="home" className="h-screen">
+      <section id="home" className="h-screen ease-linear">
+        <Navbar />
         <HomeBody />
       </section>
       <section id="about" className="h-auto ">

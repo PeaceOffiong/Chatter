@@ -1,6 +1,8 @@
 export enum REDUCER_ACTION_TYPE {
   TOOGLE,
-  TOOGLEDEFAULT
+  TOOGLEDEFAULT,
+  FIXNAVBAR,
+  NAVBARDEF 
 }
 
 export type ReducerAction = {

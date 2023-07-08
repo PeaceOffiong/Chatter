@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { Navbar } from "../components";
 
 const HomeBody = () => {
   return (
     <>
-      <Navbar />
       <div
         style={{
           backgroundImage: `url("https://res.cloudinary.com/du8oaagwi/image/upload/v1687814539/Landing_inhh3w.svg")`
